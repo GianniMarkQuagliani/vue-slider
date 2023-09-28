@@ -52,5 +52,10 @@ createApp({
             // Uttilizzo l'operatore modulo (%) per garantire un ciclo circolare tra le immagini.
             this.currentIndex = (this.currentIndex - 1 + this.images.length) % this.images.length;
         },
+        // Cambia l'immagine corrente in base all'indice fornito.
+        changeSlide(index) 
+        {
+            this.currentIndex = index;
+        },
     },
 }).mount('#app');
