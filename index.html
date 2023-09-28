@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- VUE -->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/3.3.4/vue.cjs.js' integrity='sha512-Om0T2d9tl4H2ShSsEkWjJeQOlXGJg4OZvXKZw075refp2RNZ1avQDbqd6WhwGbWhqpcn2oPmExCEa/lSLzZaJw==' crossorigin='anonymous'></script>
+    <script src="https://unpkg.com/vue@3.3.4/dist/vue.global.js"></script>
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
@@ -14,31 +14,40 @@
 </head>
 <body>
     <div id="app">
-         <!-- Contenitore principale -->
-    <div class="main-wrapper">
+        <!-- Contenitore principale -->
+        <div class="main-wrapper">
 
-        <!-- Contenitore del carosello -->
-        <div class="container">
+            <!-- Contenitore del carosello -->
+            <div class="container">
 
-            <!-- Slider del carosello -->
-            <div class="slider">
+                <!-- Slider del carosello -->
+                <div class="slider">
 
-                <!-- Contenitore degli elementi del carosello -->
-                <div class="items-wrapper"></div>
+                    <!-- Contenitore degli elementi del carosello -->
+                    <div class="items-wrapper">
+                        <!-- Uttilizzo la direttiva v-for per ciclare attraverso le immagini -->
+                        <div v-for="(image, index) in images" :key="index" class="item" :class="{ 'hide': index !== currentIndex }">
+                            <img :src="image.image" :alt="image.title">
+                            <h2>{{ image.title }}</h2>
+                            <p>{{ image.text }}</p>
+                        </div>
+                    </div>
 
-                <!-- Pulsante freccia sinistra -->
-                <div class="btn-arrow left">&larr;</div>
-                <!-- Pulsante freccia destra -->
-                <div class="btn-arrow right">&rarr;</div>
+                    <!-- Pulsante freccia sinistra -->
+                    <div class="btn-arrow left">&larr;</div>
+                    <!-- Pulsante freccia destra -->
+                    <div class="btn-arrow right">&rarr;</div>
 
-                <!-- Contenitore per i cerchi -->
-                <div class="circles"></div>
-
+                    <!-- Contenitore per i cerchi -->
+                    <div class="circles">
+                        <div></div>
+                    </div>
+                </div>
             </div>
 
         </div>
 
-    </div>
+        
 
     </div>
    

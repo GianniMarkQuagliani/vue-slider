@@ -1,2 +1,3 @@
 - inizalizzo vue e inizio
-- creo un arrey che contiene le immagini
+- creo un array di oggetti, ognuno dei quali rappresenta un'immagine nel carosello.
+- Aggiungo un indice dell'immagine attualmente visualizzata nel carosello.
