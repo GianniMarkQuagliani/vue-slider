@@ -36,11 +36,12 @@
                     <!-- Pulsante freccia sinistra -->
                     <div class="btn-arrow left">&larr;</div>
                     <!-- Pulsante freccia destra -->
-                    <div class="btn-arrow right">&rarr;</div>
+                    <div class="btn-arrow right" @click="nextSlide">&rarr;</div>
 
                     <!-- Contenitore per i cerchi -->
                     <div class="circles">
-                        <div></div>
+                        <!-- Uttilizzo v-for per ciclare attraverso le immagini e v-bind per associare la classe 'active' in base all'immagine corrente -->
+                        <div v-for="(image, index) in images" :key="index" class="circle" :class="{ 'active': index === currentIndex }" @click="changeSlide(index)"></div>
                     </div>
                 </div>
             </div>
