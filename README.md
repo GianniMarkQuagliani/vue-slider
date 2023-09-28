@@ -1,1 +1,2 @@
 - inizalizzo vue e inizio
+- creo un arrey che contiene le immagini
