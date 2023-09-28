@@ -5,4 +5,5 @@
 - Uttilizzo l'operatore modulo (%) per garantire un ciclo circolare tra le immagini
 - lo aggiungo in html
 - Torna all'immagine precedente nel carosello.
-- Cambia l'immagine corrente in base all'indice fornito.
+- Cambia l'immagine corrente in base all'indice fornito
+- Aggiungo i bonus

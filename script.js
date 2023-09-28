@@ -35,6 +35,11 @@ createApp({
           ],
           // Indice dell'immagine attualmente visualizzata nel carosello
           currentIndex: 0,
+          // Autoplay
+          autoplay: {
+            delay: 3000,
+            disableOnInteraction: true,
+          }
         };
     },
     // Definisco i metodi personalizzati che verranno utilizzati per interagire con il carosello
@@ -58,4 +63,12 @@ createApp({
             this.currentIndex = index;
         },
     },
+    mounted() {
+      // Inizializzo l'autoplay
+      this.autoplay.interval = setInterval(this.nextSlide, this.autoplay.delay);
+    },
+    deactivated() {
+      // Disabilito l'autoplay quando il componente viene disattivato
+      clearInterval(this.autoplay.interval);
+    }
 }).mount('#app');
