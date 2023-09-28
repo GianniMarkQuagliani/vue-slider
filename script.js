@@ -38,11 +38,19 @@ createApp({
         };
     },
     // Definisco i metodi personalizzati che verranno utilizzati per interagire con il carosello
-    methods: {
+    methods: 
+    {
         // Avanza all'immagine successiva nel carosello
-        nextSlide() {
+        nextSlide() 
+        {
             // Uttilizzo l'operatore modulo (%) per garantire un ciclo circolare tra le immagini
             this.currentIndex = (this.currentIndex + 1) % this.images.length;
-            },
-  },
+        },
+        // Torna all'immagine precedente nel carosello.
+        prevSlide() 
+        {
+            // Uttilizzo l'operatore modulo (%) per garantire un ciclo circolare tra le immagini.
+            this.currentIndex = (this.currentIndex - 1 + this.images.length) % this.images.length;
+        },
+    },
 }).mount('#app');
