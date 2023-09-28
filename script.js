@@ -36,5 +36,13 @@ createApp({
           // Indice dell'immagine attualmente visualizzata nel carosello
           currentIndex: 0,
         };
-      },
+    },
+    // Definisco i metodi personalizzati che verranno utilizzati per interagire con il carosello
+    methods: {
+        // Avanza all'immagine successiva nel carosello
+        nextSlide() {
+            // Uttilizzo l'operatore modulo (%) per garantire un ciclo circolare tra le immagini
+            this.currentIndex = (this.currentIndex + 1) % this.images.length;
+            },
+  },
 }).mount('#app');
