@@ -1,2 +1,1 @@
-- creo un array chiamato images
-- aggiungo un titolo e un testo nelle immagini
+- inizalizzo vue e inizio
